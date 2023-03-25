@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 /* Colors Palete */
-/* :root{
+:root {
   --card: ;
-  --cta: ;
-} */
+  --cta: #00dbb6;
+  --font: #212e4b;
+  --grey: #ccc;
+}
 
 /* General */
 * {
@@ -14,19 +15,12 @@
 }
 
 html {
-  font-family: "Rubik", sans-serif;
-  color: #333;
+  font-family: "Open Sans", sans-serif;
+  color: var(--font);
 }
 
 body {
-  width: 1200px;
-  margin: 16px 32px;
-}
-
-/* Header */
-header {
-  background-color: red;
-  justify-content: space-around;
+  margin: 32px;
 }
 
 /* Flex */
@@ -35,6 +29,38 @@ header {
   display: flex;
 }
 
+/* Header */
+header {
+  justify-content: space-between;
+  padding: 0 0 16px 0;
+  margin: 0 0 32px 0;
+  border-bottom: 1px solid var(--grey);
+}
+
+.logo,
+.about-us,
+.login {
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  gap: 24px;
+}
+
+.logo {
+  width: 300px;
+}
+
+.about-us {
+  width: 400px;
+}
+
+.login {
+  justify-content: flex-end;
+  width: 400px;
+  gap: 22px;
+}
+
+/*  */
 .order {
   background-color: red;
 }
