@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Cart</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <!-- Navbar -->
     <header class="flex" style="text-transform: capitalize">
       <div class="flex logo">
         <div class="logo">logo</div>
@@ -19,28 +27,74 @@
         <p>profile</p>
       </div>
       <div class="flex login">
-        <div class="icon">แว่นขยาย</div>
-        <div class="icon">ตระกร้า</div>
+        <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="icon"><i class="fa-regular fa-cart-shopping"></i></div>
         <p>login</p>
         <p>sign up</p>
       </div>
     </header>
+
+    <!-- Main -->
     <main>
       <h1>My Cart</h1>
+      <!-- Left flex -->
       <div class="flex container">
+        <!-- Card flex -->
         <div class="flex cards-container">
           <div class="flex card">
-            <div class="bin"></div>
-            <div class="flex-google-card"></div>
-            <div class="flex card-discription"></div>
+            <div class="icon">
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="flex-google-card">
+              <i class="fa-regular fa-file"></i>
+              <h3>Google Docs</h3>
+              <p>Used for business</p>
+            </div>
+            <div class="card-discription">
+              <h2>Google Docs</h2>
+              <!-- Rating Star-->
+              <div class="flex rating">
+                <i class="fa-solid fa-star"></i
+                ><i class="fa-regular fa-star"></i
+                ><i class="fa-regular fa-star"></i>
+                <select value="LV 1-3">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <p>THB 150</p>
+            </div>
           </div>
           <div class="flex card">
-            <div class="icon"></div>
-            <div class="flex-google-card"></div>
-            <div class="flex card-discription"></div>
+            <div class="icon">
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="flex-google-card">
+              <i class="fa-regular fa-file"></i>
+              <h3>Google Docs</h3>
+              <p>Used for business</p>
+            </div>
+            <div class="card-discription">
+              <h2>Google Docs</h2>
+              <!-- Rating Star-->
+              <div class="flex rating">
+                <i class="fa-solid fa-star"></i
+                ><i class="fa-regular fa-star"></i
+                ><i class="fa-regular fa-star"></i>
+                <select value="LV 1-3">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <p>THB 150</p>
+            </div>
           </div>
         </div>
+        <!-- Right flex -->
         <div class="flex order">
+          <!-- Form flex -->
           <div class="flex form">
             <div class="order-info">Order Info</div>
             <div class="flex input">
@@ -48,8 +102,8 @@
                 <p>Subtotal</p>
                 <div class="sub-price">THB 300</div>
               </div>
-              <form class="flex">
-                <div class="icon"></div>
+              <form class="flex form">
+                <div class="icon"><i class="fa-regular fa-keyboard"></i></div>
                 <input
                   class="promotion-code"
                   type="text"
