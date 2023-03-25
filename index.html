@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="flex" style="text-transform: capitalize">
+      <div class="flex logo">
+        <div class="logo">logo</div>
+        <div class="name">job passcard</div>
+      </div>
+      <div class="flex about-us">
+        <p>about us</p>
+        <p>passcard</p>
+        <p>profile</p>
+      </div>
+      <div class="flex login">
+        <div class="icon">แว่นขยาย</div>
+        <div class="icon">ตระกร้า</div>
+        <p>login</p>
+        <p>sign up</p>
+      </div>
+    </header>
+    <main>
+      <h1>My Cart</h1>
+      <div class="flex container">
+        <div class="flex cards-container">
+          <div class="flex card">
+            <div class="bin"></div>
+            <div class="flex-google-card"></div>
+            <div class="flex card-discription"></div>
+          </div>
+          <div class="flex card">
+            <div class="icon"></div>
+            <div class="flex-google-card"></div>
+            <div class="flex card-discription"></div>
+          </div>
+        </div>
+        <div class="flex order">
+          <div class="flex form">
+            <div class="order-info">Order Info</div>
+            <div class="flex input">
+              <div class="flex price">
+                <p>Subtotal</p>
+                <div class="sub-price">THB 300</div>
+              </div>
+              <form class="flex">
+                <div class="icon"></div>
+                <input
+                  class="promotion-code"
+                  type="text"
+                  placeholder="Promotion code"
+                />
+                <input type="submit" value="APPLY" />
+              </form>
+              <div class="flex price">
+                <p>Total payment</p>
+                <div class="total-price">THB 300</div>
+              </div>
+              <input
+                type="button"
+                value="login to check out"
+                style="text-transform: uppercase"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

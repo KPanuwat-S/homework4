@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,700&display=swap");
+
+/* Colors Palete */
+/* :root{
+  --card: ;
+  --cta: ;
+} */
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  color: #333;
+}
+
+body {
+  width: 1200px;
+  margin: 16px 32px;
+}
+
+/* Header */
+header {
+  background-color: red;
+  justify-content: space-around;
+}
+
+/* Flex */
+
+.flex {
+  display: flex;
+}
+
+.order {
+  background-color: red;
+}
