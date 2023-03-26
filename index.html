@@ -24,17 +24,22 @@
         <div class="name">job passcard</div>
       </div>
       <div class="flex about-us">
-        <p>about us</p>
-        <p>passcard</p>
-        <p>profile</p>
+        <a href="#">about us</a>
+        <a href="#">passcard</a>
+        <a href="#">profile</a>
       </div>
       <div class="flex login">
-        <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-        <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <a href="#" class="icon nav-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#" class="icon nav-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
         <!-- <div class="icon"><i class="fa-regular fa-cart-shopping"></i></div> -->
-        <p>login</p>
+        <a href="#">login</a>
+
         <p>|</p>
-        <p>sign up</p>
+        <a href="#">sign up</a>
       </div>
     </header>
 
@@ -46,9 +51,9 @@
         <!-- Card flex -->
         <div class="flex cards-container">
           <div class="flex card">
-            <div class="icon">
+            <button class="icon">
               <i class="fa-regular fa-trash-can"></i>
-            </div>
+            </button>
             <div class="flex google-card">
               <i class="fa-regular fa-file"></i>
               <h3>Google Docs</h3>
@@ -74,9 +79,9 @@
             </div>
           </div>
           <div class="flex card">
-            <div class="icon">
+            <button class="icon">
               <i class="fa-regular fa-trash-can"></i>
-            </div>
+            </button>
             <div class="flex google-card">
               <i class="fa-regular fa-file"></i>
               <h3>Google Docs</h3>
@@ -119,7 +124,7 @@
                 type="text"
                 placeholder="Promotion code"
               />
-              <input type="submit" value="APPLY" />
+              <input class="apply" type="submit" value="APPLY" />
             </form>
             <div class="flex pay-logout">
               <div class="flex price">
@@ -130,6 +135,7 @@
                 type="button"
                 value="login to check out"
                 style="text-transform: uppercase"
+                class="checkout"
               />
             </div>
           </div>

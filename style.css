@@ -3,6 +3,7 @@
 :root {
   --card: ;
   --cta: rgb(0, 219, 182);
+  --cta-dark: rgb(4, 177, 148);
   --font: rgb(33, 46, 75);
   --grey: rgb(204, 204, 204);
   --orange: rgba(229, 170, 132, 255);
@@ -23,15 +24,15 @@ html {
 }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
-  margin-top: 12px;
 }
 
 /* Flex */
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Header */
@@ -51,6 +52,20 @@ header {
   gap: 24px;
 }
 
+header a:link,
+header a:visited {
+  text-decoration: none;
+  color: var(--font);
+  transition: all 0.3s;
+}
+
+header a:hover {
+  color: var(--cta);
+}
+
+header a:active {
+  color: var(--cta-dark);
+}
 .logo {
   width: 300px;
 }
@@ -76,6 +91,51 @@ h1 {
   font-size: 36px;
 }
 
+/* Icon Setting */
+button,
+button:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--grey);
+  font-size: 24px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  color: #fff;
+  background-color: var(--cta);
+}
+button:active {
+  background-color: var(--cta-dark);
+}
+
+/* button: */
+/* .icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--grey);
+  font-size: 24px;
+} */
+
+.nav-icon i,
+.order-form i {
+  border: none;
+}
+
+.order-form i {
+  font-size: 24px;
+}
+
 /* Left flex */
 .cards-container {
   flex-direction: column;
@@ -87,6 +147,8 @@ h1 {
 .card {
   gap: 16px;
   padding: 32px 16px;
+  /* border: 1px solid var(--grey); */
+  align-items: center;
   border-radius: 6px;
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
 }
@@ -94,17 +156,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.icon i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid var(--grey);
-  font-size: 22px;
 }
 
 .google-card {
@@ -178,6 +229,11 @@ select {
   border: 1px solid var(--grey);
   /* padding: 32px; */
 }
+select:focus,
+input:focus {
+  border: none;
+  outline: 1px solid var(--cta);
+}
 
 .input,
 .order-form,
@@ -188,7 +244,7 @@ select {
 }
 
 .order-form {
-  gap: 32px;
+  gap: 12px;
   /* background-color: red; */
   padding: 0 0 32px 0;
   border-bottom: 1px solid var(--grey);
@@ -198,7 +254,7 @@ select {
   font-size: 32px;
 }
 .order-form input {
-  width: 450px;
+  width: 300px;
   border-radius: 8px;
   padding: 12px 0;
 
@@ -209,12 +265,24 @@ select {
   padding: 0 12px;
   font-size: 18px;
 }
-.order-form input[type="submit"] {
+.order-form .apply {
   width: 200px;
-  border: 1px solid var(--cta);
+  border: none;
+  outline: 1px solid var(--cta);
   color: var(--cta);
   font-size: 18px;
   background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.order-form .apply:hover {
+  background-color: var(--cta);
+  color: #fff;
+}
+
+.order-form .apply:active {
+  background-color: var(--cta-dark);
 }
 
 .pay-logout {
@@ -226,11 +294,42 @@ select {
   color: var(--cta);
 }
 
-.form input[type="button"] {
+.form .checkout,
+.form .checkout:visited {
   padding: 12px;
   border-radius: 8px;
   border: none;
   background-color: var(--cta);
   font-size: 18px;
   color: var(--font);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.form .checkout:hover {
+  color: #fff;
+}
+
+.form .checkout:active {
+  background-color: var(--cta-dark);
+}
+
+@media (max-width: 1440px) {
+  header {
+    margin: 0 32px;
+  }
+  .logo,
+  .about-us,
+  .login {
+    gap: 12px;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  main h1 {
+    text-align: center;
+  }
 }
