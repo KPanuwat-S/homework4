@@ -2,9 +2,12 @@
 /* Colors Palete */
 :root {
   --card: ;
-  --cta: #00dbb6;
-  --font: #212e4b;
-  --grey: #ccc;
+  --cta: rgb(0, 219, 182);
+  --font: rgb(33, 46, 75);
+  --grey: rgb(204, 204, 204);
+  --orange: rgba(229, 170, 132, 255);
+  --yellow: rgba(232, 225, 147, 255);
+  --dark-grey: #888;
 }
 
 /* General */
@@ -20,8 +23,9 @@ html {
 }
 
 body {
-  margin: 0 64px 16px 64px;
-  padding-top: 12px;
+  width: 1440px;
+  margin: auto;
+  margin-top: 12px;
 }
 
 /* Flex */
@@ -65,19 +69,100 @@ header {
 /* Main */
 .container {
   justify-content: space-between;
+  margin-top: 32px;
+  /* gap: 32px; */
+}
+h1 {
+  font-size: 36px;
 }
 
 /* Left flex */
-.cards-continer {
-  padding: 32px;
-  background-color: purple;
-  width: 400px;
+.cards-container {
+  flex-direction: column;
+  width: 700px;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.card {
+  gap: 16px;
+  padding: 32px 16px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--grey);
+  font-size: 22px;
+}
+
+.google-card {
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  background: linear-gradient(to right bottom, var(--orange), var(--yellow));
+  padding: 48px;
+  padding-left: 16px;
+  padding-right: 78px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.google-card i {
+  font-size: 28px;
+}
+
+.card-description {
+  padding-left: 32px;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: space-evenly;
+}
+.rating-star {
+  gap: 8px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating h2,
+.rating-star,
+select,
+.each-price {
+  color: var(--dark-grey);
+}
+
+.rating h2 {
+  margin-bottom: 28px;
+  font-size: 28px;
+}
+
+select {
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.each-price {
+  font-size: 22px;
+  font-weight: 700;
 }
 /* Right flex */
 .order {
   width: 50%;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 }
 .order-info {
   font-size: 22px;
@@ -87,8 +172,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   gap: 28px;
-  max-width: 600px;
-  padding: 24px;
+  max-width: 700px;
+  padding: 32px;
   border-radius: 8px;
   border: 1px solid var(--grey);
   /* padding: 32px; */
